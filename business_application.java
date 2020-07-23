@@ -6,7 +6,7 @@ public class business_application{
         mean_calculation();
 
     }
-    public static void mean_calculation()
+    public static double mean_calculation()
     {
          Scanner input = new Scanner(System.in);
         //double[] numbers;
@@ -23,10 +23,24 @@ public class business_application{
         };
         System.out.println("n is " + n);
         System.out.println("The mean of the entire digits you've entered is: " + sum/n);
-    }
-
-    public static void standard_deviation(){
         
+        return sum;
+    }
+    
+     //standard deviation
+    public static void SD( double[] numbers){
+        int length = numbers.length; //length of array
+        double i = mean_calculation();
+        double sum = 0;     // initializing the sum
+        for(int indx = 0; indx <numbers.length; indx++){
+            double x = Math.pow(numbers[indx], 2);
+            sum+= x; // the summations x^2 final
+        };
+
+        double standard_deviation = Math.sqrt((sum - (Math.pow(i, 2)/length))/(length-1));
+
+        System.out.println( "mean: "+ i/length + " standard Deviation " + standard_deviation);
+
     }
 
 }
