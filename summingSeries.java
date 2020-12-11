@@ -1,9 +1,9 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class summingSeries {
     public static void main(String[] args) {
-//        int m = 1;
-//        sum(m);
+       int m = 1;
+       sum(m);
 //        Scanner scan = new Scanner(System.in);
 //
 //        //make the first
@@ -39,7 +39,7 @@ public class summingSeries {
     }
 
     public static double m(double i){
-        double firstFormula = 1 /(2*i - 1);
+        // double firstFormula = 1 /(2*i - 1);
         double secondFormula = 1/(2*i + 1);
 
         //i wanna recursively get i down to 0 and the and them together
